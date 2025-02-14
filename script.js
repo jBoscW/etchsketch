@@ -34,7 +34,6 @@ function makeGrid(num1 = num) {
                 const l = Math.floor(Math.random() * 100);
 
                 this.style.backgroundColor = `hsl(240 ${s} ${l})`;
-                console.log(this.style.backgroundColor)
             };
         });
     });
