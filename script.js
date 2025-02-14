@@ -19,7 +19,7 @@ function makeGrid(num1 = num) {
         box.setAttribute('id', `num1${i}`);
         box.style.height = `${side}vh`;
         box.style.width = `${side}vw`;
-
+        
         container.appendChild(box);
     };
 
@@ -29,8 +29,9 @@ function makeGrid(num1 = num) {
             if (!this.style.backgroundColor) {
                 const s = Math.floor(Math.random() * 100);
                 const l = Math.floor(Math.random() * 100);
-        
+
                 this.style.backgroundColor = `hsl(240 ${s} ${l})`;
+                console.log(this.style.backgroundColor)
             };
         });
     });
