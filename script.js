@@ -1,12 +1,5 @@
 const container = document.querySelector('.container')
 
-function paint(square) {
-    h = 240;
-    s = Math.floor(Math.random() * 100);
-    l = Math.floor(Math.random() * 100);
-    
-};
-
 function makeGrid() {
     const num = prompt('Size of grid:');
     const side = 80/num;
@@ -21,6 +14,20 @@ function makeGrid() {
 
         container.appendChild(box);
     };
+
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(function (newBox) {
+        newBox.addEventListener('click', paint(newBox));
+    });
 }
+
+function paint(box) {
+    s = Math.floor(Math.random() * 100);
+    l = Math.floor(Math.random() * 100);
+    box.style.backgroundColor = `hsl(240 ${s} ${l})`
+};
+
+
+
 
 makeGrid()

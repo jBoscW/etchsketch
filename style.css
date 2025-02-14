@@ -37,3 +37,7 @@ h1 {
     box-sizing: border-box;
     border: 1px lightblue solid;
 }
+.body {
+    margin: 0;
+    padding: 0;
+}
