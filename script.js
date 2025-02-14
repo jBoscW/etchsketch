@@ -16,15 +16,18 @@ function makeGrid() {
     };
 
     const boxes = document.querySelectorAll('.box');
-    boxes.forEach(function (newBox) {
-        newBox.addEventListener('click', paint(newBox));
+    boxes.forEach((newBox) => {
+        newBox.addEventListener('mouseover', () => {
+            s = Math.floor(Math.random() * 100);
+            l = Math.floor(Math.random() * 100);
+    
+            newBox.style.backgroundColor = `hsl(240 ${s} ${l})`;
+        });
     });
 }
 
 function paint(box) {
-    s = Math.floor(Math.random() * 100);
-    l = Math.floor(Math.random() * 100);
-    box.style.backgroundColor = `hsl(240 ${s} ${l})`
+    
 };
 
 
