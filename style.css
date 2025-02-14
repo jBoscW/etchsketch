@@ -4,20 +4,21 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    height: 100vh;
+    height: 98vh;
 }
 
 header, 
 footer {
-    text-align: center;
-    max-height: 10vh;
-    margin: 1rem 0;
+    height: 9vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
     margin: 0;
 }
-
 
 .container {
     flex: 1;
@@ -29,10 +30,10 @@ h1 {
     max-width: 80vw;
     
     box-sizing: border-box;
-    /* border: 3px lightgray solid; */
+    /* border: 2px lightblue solid; */
 }
 
 .box {
     box-sizing: border-box;
-    border: 1px lightgray solid;
+    border: 1px lightblue solid;
 }
