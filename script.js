@@ -26,11 +26,11 @@ function makeGrid() {
         
                 this.style.backgroundColor = `hsl(240 ${s} ${l})`;
             };
-
-
         });
     });
 }
 
+const leftButt = document.querySelector('#leftButton');
+const rightButt = document.querySelector('#rightButton');
 
 makeGrid()
