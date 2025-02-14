@@ -1,4 +1,5 @@
 const container = document.querySelector('.container')
+const WHITE = 'rgb(255, 255, 255)'
 
 function makeGrid() {
     const num = prompt('Size of grid:');
