@@ -1,11 +1,14 @@
 const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
+
 let num = prompt('Size of grid:');
+while (num > 100 || num < 1 || !Number.isInteger(parseInt(num))) 
+    num = prompt('Please enter a number between 1 and 100')
 
 function makeGrid(num1 = num) {
-    while (num1 > 100 || num1 < 1 || !Number.isInteger(parseInt(num1))) {
+    while (num1 > 100 || num1 < 1 || !Number.isInteger(parseInt(num1))) 
         num1 = prompt('Please enter a number between 1 and 100')
-    }
+    
     if (container.hasChildNodes()) {
         container.textContent=''
     }
