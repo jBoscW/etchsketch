@@ -1,22 +1,19 @@
 const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
-const leftButt = document.querySelector('#leftButton');
-const rightButt = document.querySelector('#rightButton');
+let num = prompt('Size of grid:');
 
-function makeGrid() {
-    const num = prompt('Size of grid:');
-
+function makeGrid(num1 = num) {
     if (container.hasChildNodes()) {
         container.textContent=''
     }
-    const side = 80/num;
-    h1.textContent = num + 'x' + num + ' Grid'
+    const side = 80/num1;
+    h1.textContent = num1 + 'x' + num1 + ' Grid'
 
-    for (let i = 0; i < num ** 2; i++) {
+    for (let i = 0; i < num1 ** 2; i++) {
         const box = document.createElement('div');
 
         box.setAttribute('class', 'box');
-        box.setAttribute('id', `num${i}`);
+        box.setAttribute('id', `num1${i}`);
         box.style.height = `${side}vh`;
         box.style.width = `${side}vw`;
 
@@ -36,6 +33,13 @@ function makeGrid() {
     });
 }
 
+const leftButt = document.querySelector('#leftButton');
+const rightButt = document.querySelector('#rightButton');
 
-leftButt.addEventListener('click', makeGrid)
+leftButt.addEventListener('click', () => {
+    num = prompt('Size of grid:');
+    makeGrid(num);
+});
+rightButt.addEventListener('click', () => makeGrid(num))
+
 makeGrid()
