@@ -1,8 +1,14 @@
 const container = document.querySelector('.container');
 const h1 = document.querySelector('h1');
+const leftButt = document.querySelector('#leftButton');
+const rightButt = document.querySelector('#rightButton');
 
 function makeGrid() {
     const num = prompt('Size of grid:');
+
+    if (container.hasChildNodes()) {
+        container.textContent=''
+    }
     const side = 80/num;
     h1.textContent = num + 'x' + num + ' Grid'
 
@@ -30,7 +36,6 @@ function makeGrid() {
     });
 }
 
-const leftButt = document.querySelector('#leftButton');
-const rightButt = document.querySelector('#rightButton');
 
+leftButt.addEventListener('click', makeGrid)
 makeGrid()
